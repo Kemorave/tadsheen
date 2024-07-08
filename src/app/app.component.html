@@ -4,8 +4,8 @@
 >
   <section class="my-auto h-[600px] px-5 flex flex-col w-full relative">
     <p class="text-lg ml-auto text-end w-[350px] -mr-[180px]">
-      بمباركة سموكم الكريم في تدشين قافلة امتثال المباني والتي تهدف الي لتسهيل
-      إجراءات استخراج شهادة امتثال المباني للمواقع المستهدفة
+      بمباركة سموكم الكريم يتم تدشين امتثال المباني والتي تهدف تسهيل إجراءات
+      استخراج شهادة امتثال المباني للمواقع المستهدفة
     </p>
 
     <p class="text-end mt-[10%] text-lg -mr-[140px] font-bold">
@@ -22,7 +22,8 @@
   </section>
   <section class="h-full flex flex-col items-center relative">
     <img src="images/Picture2.png" class="h-[100vh] w-[350px] object-fill" />
-    <p (click)="showVid = true" 
+    <p
+      (click)="showVid = true"
       class="bg-white border-hidden cursor-pointer rounded-full h-[100px] w-[100px] flex justify-center self-center text-center p-[20px] absolute z-50 bottom-3"
     >
       <span (click)="showVid = true" class="text-black my-auto font-extrabold"
@@ -40,7 +41,13 @@
     </div>
   </section>
 </div>
-<video  class="  h-[100vh] w-full object-fill  "  *ngIf="showVid" autoplay muted loop id="myVideo">
-  <source    src="video/Bus 1.mp4" type="video/mp4">
+<video
+  class="h-[100vh] w-full object-fill"
+  *ngIf="showVid"
+  autoplay
+  muted
+  loop
+  id="myVideo"
+>
+  <source src="video/Bus 1.mp4" type="video/mp4" />
 </video>
- 
