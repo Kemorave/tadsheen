@@ -1,53 +1,52 @@
 <div
-  *ngIf="!showVid"
-  class="bg-[url('/images/Picture1.png')] bg-cover bg-no-repeat h-[100vh] w-dvw px-10 grid grid-cols-3 overflow-hidden overscroll-none"
+  *ngIf="!vidPlaying"
+  class="bg-[url('/images/تدشين.png')] bg-cover bg-no-repeat h-[100vh] w-dvw overflow-hidden overscroll-none flex flex-col"
 >
-  <section class="my-auto h-[600px] px-5 flex flex-col w-full relative">
-    <p class="text-lg ml-auto text-end w-[350px] -mr-[180px]">
-      بمباركة سموكم الكريم يتم تدشين امتثال المباني والتي تهدف تسهيل إجراءات
-      استخراج شهادة امتثال المباني للمواقع المستهدفة
-    </p>
-
-    <p class="text-end mt-[10%] text-lg -mr-[140px] font-bold">
-      ....... الرسالة​
-    </p>
-    <p class="text-lg mt-[10%] ml-auto text-end w-[350px] text-green-500">
-      لتصبح حائل الأجمل امتثال مبانيكم يساهم في تحسين المشهد الحضري للمدينة ساهم
-      في اصدار شهادة امتثال المباني​
-    </p>
-
-    <p class="text-end mt-[30%]">،،،اخوكم​</p>
-    <p class="text-end">عبدالعزيز بن سعد بن عبدالعزيز ال سعود​</p>
-    <p>أمير منطقه حائل​</p>
-  </section>
-  <section class="h-full flex flex-col items-center relative">
-    <img src="images/Picture2.png" class="h-[100vh] w-[350px] object-fill" />
-    <p
-      (click)="showVid = true"
-      class="bg-white border-hidden cursor-pointer rounded-full h-[100px] w-[100px] flex justify-center self-center text-center p-[20px] absolute z-50 bottom-3"
-    >
-      <span (click)="showVid = true" class="text-black my-auto font-extrabold"
-        >تدشيين</span
-      >
-    </p>
-  </section>
-  <section class="h-full">
-    <div class="mt-[50%] flex relative">
+  <div class="flex mt-20 mx-auto h-[100px] gap-12">
+    <style>
+      img {
+        height: 110px;
+      }
+    </style>
+    <img src="./images/Vision2030.png" />
+    <img src="./images/Wizara.png" />
+    <img src="./images/Pictur31.png" />
+  </div>
+  <div class="flex justify-between mb-auto mt-32">
+    <div class="flex my-auto mr-auto relative" style="height: 25vw">
       <img
-        class="w-[250px] h-[150px] -mr-[140px] mt-10"
-        src="images/Pictur31.png"
+        src="./images/Group (1).svg"
+        style="height: 25vw; max-width: 800px"
       />
-      <img class="w-[350px] h-[350px]" src="images/Pictur41.png" />
+      <img
+        src="./images/Group (3).svg"
+        style="height: 100px; position: absolute; top: 10%; right: -40px"
+      />
+      <img
+        src="./images/Group (2).svg"
+        style="height: 50px; position: absolute; top: 15%; right: -50px"
+      />
     </div>
-  </section>
+    <div class="flex flex-col mx-10 text-center items-center text-3xl gap-10">
+      <p>برعاية معالي وزير الشئون البلدية والقروية والاسكان</p>
+      <p class="text-[#58F9E3]">الاستاذ / ماجد بن عبد الله الحقيل</p>
+      <p>{{ title() }}</p>
+      <button
+          (click)=" clik()"
+        class="bg-[url('/images/Button.svg')] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
+      >
+        <span class="m-auto pb-10">تدشين</span>
+      </button>
+    </div>
+  </div>
 </div>
 <video
   class="h-[100vh] w-full object-fill"
-  *ngIf="showVid"
+  *ngIf="vidPlaying"
   autoplay
   muted
   loop
   id="myVideo"
 >
-  <source src="video/Bus 1.mp4" type="video/mp4" />
+  <source src="video/Video1.mp4" type="video/mp4" />
 </video>
