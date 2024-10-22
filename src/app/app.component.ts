@@ -23,7 +23,7 @@ clik() {
 
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;
-    this.showVid = params.get('showVid') === 'true';
+    this.showVid = params.get('showvid') === 'true';
   }
   title() {
     return this.showVid
