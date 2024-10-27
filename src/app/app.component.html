@@ -1,4 +1,6 @@
-<body class="h-dvh w-dvw bg-[url('/images/image.png')] bg-cover bg-no-repeat">
+<body
+  class="h-dvh w-dvw bg-[url('/images/Screenshot.png')] bg-cover bg-no-repeat"
+>
   <div
     *ngIf="!vidPlaying"
     class="h-[100vh] w-dvw overflow-hidden overscroll-none flex flex-col"
@@ -14,24 +16,15 @@
       <img src="./images/Pictur31.png" />
     </div>
     <div class="flex justify-between mb-auto mt-32">
-      <div class="flex my-auto mr-auto relative" style="height: 25vw">
-        <img
-          src="./images/Group (1).svg"
-          style="height: 25vw; max-width: 800px"
-        />
-        <img
-          src="./images/Group (3).svg"
-          style="height: 100px; position: absolute; top: 10%; right: -40px"
-        />
-        <img
-          src="./images/Group (2).svg"
-          style="height: 50px; position: absolute; top: 15%; right: -50px"
-        />
-      </div>
-      <div class="flex flex-col mx-10 text-center items-center text-3xl gap-10">
-        <p>برعاية معالي وزير الشئون البلدية والقروية والاسكان</p>
-        <p class="text-4xl text-[#58F9E3]">الاستاذ / ماجد بن عبد الله الحقيل</p>
-        <p>{{ title() }}</p>
+      <style>
+        p{
+           text-shadow: 2px 2px #ffffff;
+        }
+      </style>
+       <div class="flex flex-col mx-10 font-extrabold text-center text-black items-center text-4xl gap-10">
+        <p class="text-black">برعاية معالي وزير الشئون البلدية والقروية والاسكان</p>
+        <p class="text-6xl text-[#147524]">الاستاذ / ماجد بن عبد الله الحقيل</p>
+        <p class="text-black">{{ title() }}</p>
         <button
           (click)="clik()"
           class="bg-[url('/images/Group.png')] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
@@ -39,14 +32,22 @@
           <span class="m-auto pb-10">تدشين</span>
         </button>
       </div>
+    
     </div>
   </div>
-  <div class="h-[100vh] justify-center  w-full flex flex-col" *ngIf="vidPlaying">
-   <div class="flex items-center mx-[100px]">
- <img style="height: 30vh;width: 30%; " class=" object-contain  " src="./images/Group 2258.svg" />
- <img style="height: 60vh;width: 70% " class=" object-contain   " src="./images/Group 2248.svg" />
-
-   </div>
+  <div class="h-[100vh] justify-center w-full flex flex-col" *ngIf="vidPlaying">
+    <div class="flex items-center mx-[100px]">
+      <img
+        style="height: 30vh; width: 30%"
+        class="object-contain"
+        src="./images/Group 2258.svg"
+      />
+      <img
+        style="height: 60vh; width: 70%"
+        class="object-contain"
+        src="./images/Group 2248.svg"
+      />
+    </div>
     <img class="mx-auto w-[600px] h-[200px]" src="./images/Group 2251.svg" />
   </div>
 </body>
