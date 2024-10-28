@@ -49,6 +49,6 @@ export class AppComponent implements OnInit {
     }, 1000);
   }
   title() {
-    return 'تم إسقاط مؤشر إستطلاع مشاريع البنية التحتية';
+    return 'سيتم إسقاط مؤشر إستطلاع مشاريع البنية التحتية';
   }
 }
