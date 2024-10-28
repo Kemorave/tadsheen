@@ -11,7 +11,15 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   clik() {
-    this.vidPlaying = true;
+    this.vidPlaying = true ;
+    setInterval(() => {
+      this.hiddendiv = false;
+      let ins = setInterval(() => {
+        this.runJob();
+        clearInterval(ins);
+      }, 1000);
+    },1000,)
+    
   }
   showVid = false;
   vidPlaying = false;
@@ -20,6 +28,27 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;
     this.showVid = params.get('showvid') === 'true';
+
+  }
+  counterHTML:any;
+  hiddendiv = true;   
+  timeleft = 5;
+  runJob() { 
+    let icon = document.getElementById('checkicon');
+
+    let downloadTimer: any = null;
+   
+    this.counterHTML = this.timeleft;
+    downloadTimer = setInterval(() => {
+      this.timeleft--;
+      this.counterHTML = this.timeleft;
+      if (this.timeleft <= 0) {
+        this.counterHTML = `
+            
+            `;
+        clearInterval(downloadTimer);
+      }
+    }, 1000);
   }
   title() {
     return 'تم إسقاط مؤشر إستطلاع مشاريع البنية التحتية';

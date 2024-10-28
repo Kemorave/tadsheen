@@ -2840,48 +2840,7 @@
       </div>
     </app-root>
     <script>
- let ins=   setInterval(()=>{
-      runJob();
-      clearInterval(ins);
-    }
-    ,1000);
-      function runJob() {
-        document.getElementById("buttn").innerHTML = "جاري الحفظ";
-        document.getElementById("hiddendiv").hidden = false;
-        let counterHTML = document.getElementById("counter");
-        let icon = document.getElementById("checkicon");
-
-        let downloadTimer = null;
-        let timeleft = 5;
-        counterHTML.innerHTML = timeleft;
-        downloadTimer = setInterval(() => {
-          timeleft--;
-          counterHTML.innerHTML = timeleft;
-          if (timeleft <= 0) {
-            counterHTML.innerHTML = `
-            <div  style="
-            width: 100px;
-            height: 100px;" id="checkicon"   >
-  <div class="success-animation">
-<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
-</div>
-  </div>
-            <p style="color:rgb(4, 199, 4);font-size: 2rem;">
-              تم اسقاط المؤشر بنجاح علي المنصه
-            </p>
-            <p style=" font-size: 2rem;">
-              اسم المؤشر: زيادة مستوى الغطاء النباتي لامانة منطقة حائل
-            </p>
-            <p  style=" font-size: 2rem;color:">
-              الجهه المسؤله : الادارة العامه للحدائق
-فترة تكرار المؤشر :ربع سنوي
-              </p>
-            `;
-            clearInterval(downloadTimer);
-          }
-        }, 1000);
-      }
-    </script>
+   </script>
     <style>
       .success-animation {
       }

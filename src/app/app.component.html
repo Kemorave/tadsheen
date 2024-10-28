@@ -1,3 +1,63 @@
+ <style>
+      .success-animation {
+      }
+
+      .checkmark {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #4bb71b;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #4bb71b;
+        animation: fill 0.4s ease-in-out 0.4s forwards,
+          scale 0.3s ease-in-out 0.9s both;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        margin: 0 auto;
+      }
+      .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #4bb71b;
+        fill: #fff;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+
+      .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+
+      @keyframes stroke {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes scale {
+        0%,
+        100% {
+          transform: none;
+        }
+
+        50% {
+          transform: scale3d(1.1, 1.1, 1);
+        }
+      }
+
+      @keyframes fill {
+        100% {
+          box-shadow: inset 0px 0px 0px 30px #4bb71b;
+        }
+      }
+    </style>
 <body class="h-dvh w-dvw bg-[url('/images/image.png')] bg-cover bg-no-repeat">
   <div
     *ngIf="!vidPlaying"
@@ -41,12 +101,91 @@
       </div>
     </div>
   </div>
-  <div class="h-[100vh] justify-center  w-full flex flex-col" *ngIf="vidPlaying">
-   <div class="flex items-center mx-[100px]">
- <img style="height: 30vh;width: 30%; " class=" object-contain  " src="./images/Group 2258.svg" />
- <img style="height: 60vh;width: 70% " class=" object-contain   " src="./images/Group 2248.svg" />
-
-   </div>
-    <img class="mx-auto w-[600px] h-[200px]" src="./images/Group 2251.svg" />
+  <div class="h-dvh w-dvw" *ngIf="vidPlaying">
+    <img
+      style="height: 100vh"
+      class="w-dvw h-dvh object-fill"
+      src="./images/WhatsApp.jpeg"
+    />
+    <div
+      *ngIf="!hiddendiv"
+      style="
+        z-index: 10000;
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        background-color: #000000a1;
+      "
+      id="hiddendiv"
+    >
+      <div
+        style="
+          margin: auto;
+          border-style: solid;
+          border-radius: 20px;
+          background-color: white;
+          border-color: gray;
+          border-width: 1px;
+          width: 600px;
+          height: 500px;
+          padding: 50px;
+          display: flex;
+          top: 0;
+          flex-direction: column;
+          text-align: center;
+        "
+      >
+        <div
+          id="counter"
+          style="
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 8rem;
+            color: black;
+            font-weight: bold;
+          "
+        >
+          {{ counterHTML }}
+          <div *ngIf="timeleft <= 0" style="color: black;">
+            <div class="mx-auto" style= " width: 100px; height: 100px" id="checkicon">
+              <div class="success-animation ">
+                <svg
+                  class="checkmark"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <circle
+                    class="checkmark__circle"
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    fill="none"
+                  />
+                  <path
+                    class="checkmark__check"
+                    fill="none"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <p style="color: rgb(4, 199, 4); font-size: 2rem">
+              تم اسقاط المؤشر بنجاح علي المنصه
+            </p>
+            <p style="font-size: 2rem ;color: black;">
+              اسم المؤشر: استطلاع مدى رضا السكان عن المشاريع السنوية
+            </p>
+            <p style="font-size: 2rem;color: black;">
+              الجهه المسؤله : الادارة العامه فترة تكرار المؤشر :سنوي
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
