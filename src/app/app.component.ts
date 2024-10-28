@@ -11,15 +11,14 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   clik() {
-    this.vidPlaying = true ;
-    setInterval(() => {
+    this.vidPlaying = true;
+    let i = setTimeout(() => {
       this.hiddendiv = false;
       let ins = setInterval(() => {
         this.runJob();
         clearInterval(ins);
       }, 1000);
-    },1000,)
-    
+    }, 1000);
   }
   showVid = false;
   vidPlaying = false;
@@ -28,16 +27,15 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;
     this.showVid = params.get('showvid') === 'true';
-
   }
-  counterHTML:any;
-  hiddendiv = true;   
+  counterHTML: any;
+  hiddendiv = true;
   timeleft = 5;
-  runJob() { 
+  runJob() {
     let icon = document.getElementById('checkicon');
 
     let downloadTimer: any = null;
-   
+
     this.counterHTML = this.timeleft;
     downloadTimer = setInterval(() => {
       this.timeleft--;
