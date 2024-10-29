@@ -27,6 +27,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;
     this.showVid = params.get('showvid') === 'true';
+
+    if (this.showVid) {this.clik()};
   }
   counterHTML: any;
   hiddendiv = true;
