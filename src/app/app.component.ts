@@ -10,16 +10,12 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-clik() {
-  if (this.showVid) {
-    this.vidPlaying = true;
-  }else{
+  clik() {
     window.open(this.link, '_blank');
   }
-}
   showVid = false;
   vidPlaying = false;
-  link = 'http://51.15.23.9:8986/buildings';
+  link = 'http://51.15.23.9:8964/';
 
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;

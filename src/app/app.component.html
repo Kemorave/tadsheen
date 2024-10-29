@@ -1,65 +1,21 @@
-<div
-  *ngIf="!vidPlaying"
-  class="bg-[url('/images/تدشين.png')] bg-cover bg-no-repeat h-[100vh] w-dvw overflow-hidden overscroll-none flex flex-col"
->
-  <div class="flex mt-20 mx-auto h-[100px] gap-12">
-    <style>
-      img {
-        height: 110px;
-      }
-    </style>
-    <img src="./images/Vision2030.png" />
-    <img src="./images/شعار الوزارة طولي ابيض.svg" />
-    <img src="./images/Group 1171275320.svg" />
-  </div>
-  <div class="flex justify-between mb-auto mt-32">
-    <div class="flex my-auto mr-auto relative" style="height: 25vw">
-      <img
-        src="./images/Group (1).svg"
-        style="height: 25vw; max-width: 800px"
-      />
-      <img
-        src="./images/Group (3).svg"
-        style="height: 100px; position: absolute; top: 10%; right: -40px"
-      />
-      <img
-        src="./images/Group (2).svg"
-        style="height: 50px; position: absolute; top: 15%; right: -50px"
-      />
-    </div>
-    <div class="flex flex-col mx-10 text-center items-center text-4xl gap-5">
-      <p>برعاية صاحب السمو الملكي الأمير</p>
-      <p class="text-[#58F9E3]">عبد العزيز بن سعد بن عبد العزيز آل سعود</p>
-      <p>و بحضور معالي وزير البلديات والاسكان</p>
-      <p class="text-[#58F9E3]">الاستاذ / ماجد بن عبد الله الحقيل</p>
-      <p>{{ title() }}</p>
-      <button
-        (click)="clik()"
-        class="bg-[url('/images/Button.svg')] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
-      >
-        <span class="m-auto pb-10">تدشين</span>
-      </button>
-    </div>
-    <!-- <div class="flex flex-col mx-10 text-center items-center text-4xl gap-5">
-      <p>برعاية معالي وزير البلديات والاسكان</p>
-      <p class="text-[#58F9E3]">الاستاذ / ماجد بن عبد الله الحقيل</p>
-      <p>{{ title() }}</p>
-      <button
-        (click)="clik()"
-        class="bg-[url('/images/Button.svg')] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
-      >
-        <span class="m-auto pb-10">تدشين</span>
-      </button>
-    </div> -->
-  </div>
-</div>
-<video
-  class="h-[100vh] w-full object-fill"
-  *ngIf="vidPlaying"
-  autoplay
-  muted
-  loop
-  id="myVideo"
->
-  <source src="video/Video1.mp4" type="video/mp4" />
-</video>
+<body class="flex">
+  <video
+    playsinline
+    class="h-[100vh] w-[100vw] object-fill"
+    [autoplay]="true"
+    muted
+    [volume]="0"
+    id="myVideo"
+  >
+    <source src="video/Isqat.mp4" type="video/mp4" />
+  </video>
+  <script>
+    document.getElementById("myVideo").play();
+  </script>
+  <button
+    (click)="clik()"
+    class="bg-[url('/images/Button.svg')] absolute top-[65%] bottom-0 right-[100px] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
+  >
+    <span class="m-auto pb-10 text-3xl">إسقاط</span>
+  </button>
+</body>
