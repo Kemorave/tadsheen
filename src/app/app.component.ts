@@ -11,11 +11,9 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 clik() {
-  if (this.showVid) {
+  
     this.vidPlaying = true;
-  }else{
-    window.open(this.link, '_blank');
-  }
+  
 }
   showVid = false;
   vidPlaying = false;
@@ -26,8 +24,6 @@ clik() {
     this.showVid = params.get('showvid') === 'true';
   }
   title() {
-    return this.showVid
-      ? 'سيتم تدشين مبنى اتمام الذكي'
-      : 'سيتم تدشين منصة اداره المباني والمرافق';
+    return 'سيتم تدشين طريق الملك عبدالعزيز ';
   }
 }
