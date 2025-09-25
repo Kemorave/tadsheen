@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     let params = new URL(document.location.toString()).searchParams;
     this.showVid = params.get('showvid') === 'true';
   }
-  title() {
+  title() {  
     return this.showVid
       ? 'سيتم تدشين مبنى اتمام الذكي'
       : 'سيتم تدشين منصة اداره المباني والمرافق';
