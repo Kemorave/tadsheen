@@ -1,22 +1,19 @@
-<body class="flex">
-  <video
-    playsinline
-    class="h-[100vh] w-[100vw] object-fill"
-    [autoplay]="true"
-    muted
-    loop
-    [volume]="0"
-    id="myVideo"
-  >
-    <source src="video/Isqat.mp4" type="video/mp4" />
-  </video>
-  <script>
-    document.getElementById("myVideo").play();
-  </script>
-  <button
-    (click)="clik()"
-    class="bg-[url('/images/Button.svg')] absolute top-[65%] bottom-0 right-[100px] bg-contain flex bg-no-repeat h-[150px] w-[350px]"
-  >
-    <span class="m-auto pb-10 text-3xl">إسقاط</span>
-  </button>
+<body class="body">
+  <div class="layer flex items-center pr-20">
+    <div class="content text-white flex flex-col gap-2 mb-14">
+      <p class="text-[22px] font-medium">تحت رعاية معالي وزير الشؤون البلدية والقروية والإسكان</p>
+      <p class="text-3xl font-bold">الأستاذ ماجد بن عبدالله الحقيل</p>
+      <p class="text-[22px] font-medium">وبحضور سعادة أمين منطقة حائل</p>
+      <p class="text-3xl font-bold">المهندس سلطان بن حامد الزايدي</p>
+      <p class="text-2xl font-medium">تطلق أمانة منطقة حائل مبنى "إتمام" الذكي كنموذج مبتكر لإدارة المباني</p>
+      <p class="text-2xl font-medium">والمرافق بتقنيات حديثة تعزز كفاءة الإنفاق</p>
+      <p class="text-2xl font-medium">وتطور إدارة الأصول، وترتقي بجودة العمليات والتخطيط والسلامة والتواصل</p>
+      <p class="text-2xl font-medium">لضمان بيئة آمنة وفعّالة وخدمات بلدية متميزة تحقق جودة الحياة</p>
+    </div>
+
+    <button (click)="clik()"
+      class="bg-[url('/images/Button.svg')] absolute top-[65%] bottom-0 right-[100px] bg-contain flex bg-no-repeat h-[150px] w-[350px] mt-12">
+      <span class="m-auto pb-10 text-3xl">تدشين</span>
+    </button>
+  </div>
 </body>
