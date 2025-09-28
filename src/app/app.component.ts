@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   }
   showVid = false;
   vidPlaying = false;
-  link = 'http://51.15.23.9:8964?showvid=true';
+  link = 'http://89.237.131.21:9050/view/1851805000914132994';
 
   ngOnInit(): void {
     let params = new URL(document.location.toString()).searchParams;
