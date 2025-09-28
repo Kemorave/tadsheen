@@ -12,5 +12,51 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(to left,rgba(0, 0, 0, 0.75) 0%,rgba(0, 0, 0, 0.4) 40%,rgba(0, 0, 0, 0.06) 100%);
+        display: flex;
+        align-items: center;
+        padding-right: 100px;
+        .content {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 120px;
+            .text-small {
+                font-size: 22px;
+                font-weight: 500;
+            }
+            .text-large  {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .text-medium {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+        .my-button {
+  background-image: url('/images/Button.svg');
+  position: absolute;
+  top: 65%;
+  bottom: 0;
+  right: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 150px;
+  width: 350px;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin: auto;
+    font-size: 30px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+}
+
     }
 }
